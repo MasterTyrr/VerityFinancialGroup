@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace Johns_WebPage.Models
+namespace VerityFinancial.Data
 {
     public class IndexViewModel
     {
