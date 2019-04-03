@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Johns_WebPage.Models;
+using VerityFinancial.Data;
 
 namespace Johns_WebPage.Controllers
 {

@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Johns_WebPage.Models;
+using VerityFinancial.Data;
 
 namespace Johns_WebPage
 {

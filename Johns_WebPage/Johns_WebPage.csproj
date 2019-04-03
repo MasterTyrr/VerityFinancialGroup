@@ -251,6 +251,20 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VerityFinancial.Data\VerityFinancial.Data.csproj">
+      <Project>{ef1d2856-9f7e-498d-8aa2-303efb3d16c3}</Project>
+      <Name>VerityFinancial.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VerityFinancial.Models\VerityFinancial.Models.csproj">
+      <Project>{8087ee85-288a-498c-a755-e4253b20959f}</Project>
+      <Name>VerityFinancial.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VerityFinancial.Services\VerityFinancial.Services.csproj">
+      <Project>{2e4a55c6-bbeb-44c6-9843-b221b9ca63b2}</Project>
+      <Name>VerityFinancial.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
