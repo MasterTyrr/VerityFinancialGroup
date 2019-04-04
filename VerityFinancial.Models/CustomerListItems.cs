@@ -9,6 +9,8 @@ namespace VerityFinancial.Models
     public class CustomerListItems
     {
         public int CustomerId { get; set; }
-        public string MyProperty { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int PhoneNumber { get; set; }
     }
 }

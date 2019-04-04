@@ -235,6 +235,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

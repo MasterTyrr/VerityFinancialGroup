@@ -16,5 +16,21 @@ namespace Johns_WebPage.Controllers
             var model = new CustomerListItems[0];
             return View(model);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CustomerCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }
