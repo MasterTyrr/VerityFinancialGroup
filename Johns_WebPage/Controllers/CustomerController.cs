@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VerityFinancial.Models;
+using VerityFinancial.Services;
 
 namespace Johns_WebPage.Controllers
 {
@@ -13,7 +15,9 @@ namespace Johns_WebPage.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var model = new CustomerListItems[0];
+            var CustomerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerServices(CustomerId);
+            var model = service.GetCustomerList();
             return View(model);
         }
 
@@ -28,9 +32,15 @@ namespace Johns_WebPage.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var CustomerId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerServices(CustomerId);
+
+            service.CreateCustomer(model);
+
+            return RedirectToAction("Index");
         }
     }
 }

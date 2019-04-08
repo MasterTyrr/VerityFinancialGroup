@@ -16,9 +16,9 @@ namespace VerityFinancial.Models
         public int PhoneNumber { get; set; }
         public string Address { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        //public override string ToString()
+        //{-
+        //    return base.ToString();
+        //}
     }
 }

@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VerityFinancial.Data\VerityFinancial.Data.csproj">
+      <Project>{ef1d2856-9f7e-498d-8aa2-303efb3d16c3}</Project>
+      <Name>VerityFinancial.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VerityFinancial.Models\VerityFinancial.Models.csproj">
+      <Project>{8087ee85-288a-498c-a755-e4253b20959f}</Project>
+      <Name>VerityFinancial.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

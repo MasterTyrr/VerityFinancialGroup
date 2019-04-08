@@ -32,7 +32,7 @@ namespace VerityFinancial.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Customer> customers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
