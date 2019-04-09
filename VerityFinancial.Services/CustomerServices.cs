@@ -22,7 +22,7 @@ namespace VerityFinancial.Services
             var entity =
                 new Customer()
                 {
-                    CustomerID = _userId,
+                    CustomerGuid = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     PhoneNumber = model.PhoneNumber,
@@ -46,6 +46,7 @@ namespace VerityFinancial.Services
                             e =>
                                 new CustomerListItems
                                 {
+                                    CustomerId = e.CustomerId,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
                                     PhoneNumber = e.PhoneNumber,
@@ -56,11 +57,48 @@ namespace VerityFinancial.Services
                 return query.ToArray();
             }
         }
+
+        public CustomerDetail GetCustomerById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+
+                var entity =
+                 ctx
+                     .Customers
+                     .Single(e => e.CustomerId == id);
+                return
+                    new CustomerDetail
+                    {
+                        CustomerId = entity.CustomerId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        PhoneNumber = entity.PhoneNumber,
+                        Address = entity.Address
+                    };
+            }
+        }
+        public bool UpdateCustomer(CustomerTrade model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Customers
+                        .Single(e => e.CustomerGuid == _userId);
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.PhoneNumber = model.PhoneNumber;
+                entity.Address = model.Address;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
-    
 
 
-        
-        
-  
+
+
+
+

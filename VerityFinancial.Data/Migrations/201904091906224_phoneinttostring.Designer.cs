@@ -7,13 +7,13 @@ namespace VerityFinancial.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class second : IMigrationMetadata
+    public sealed partial class phoneinttostring : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(second));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(phoneinttostring));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904041905594_second"; }
+            get { return "201904091906224_phoneinttostring"; }
         }
         
         string IMigrationMetadata.Source

@@ -7,13 +7,13 @@ namespace VerityFinancial.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class initial : IMigrationMetadata
+    public sealed partial class intialafterdbdrop : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(intialafterdbdrop));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904032037192_initial"; }
+            get { return "201904091843304_intialafterdbdrop"; }
         }
         
         string IMigrationMetadata.Source

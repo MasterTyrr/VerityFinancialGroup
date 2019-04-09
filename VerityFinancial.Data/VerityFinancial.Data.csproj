@@ -56,13 +56,17 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201904032037192_initial.cs" />
-    <Compile Include="Migrations\201904032037192_initial.Designer.cs">
-      <DependentUpon>201904032037192_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201904091843304_intialafterdbdrop.cs" />
+    <Compile Include="Migrations\201904091843304_intialafterdbdrop.Designer.cs">
+      <DependentUpon>201904091843304_intialafterdbdrop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904041905594_second.cs" />
-    <Compile Include="Migrations\201904041905594_second.Designer.cs">
-      <DependentUpon>201904041905594_second.cs</DependentUpon>
+    <Compile Include="Migrations\201904091847213_phonenumberupdate.cs" />
+    <Compile Include="Migrations\201904091847213_phonenumberupdate.Designer.cs">
+      <DependentUpon>201904091847213_phonenumberupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904091906224_phoneinttostring.cs" />
+    <Compile Include="Migrations\201904091906224_phoneinttostring.Designer.cs">
+      <DependentUpon>201904091906224_phoneinttostring.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,11 +76,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904032037192_initial.resx">
-      <DependentUpon>201904032037192_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904091843304_intialafterdbdrop.resx">
+      <DependentUpon>201904091843304_intialafterdbdrop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904041905594_second.resx">
-      <DependentUpon>201904041905594_second.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904091847213_phonenumberupdate.resx">
+      <DependentUpon>201904091847213_phonenumberupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904091906224_phoneinttostring.resx">
+      <DependentUpon>201904091906224_phoneinttostring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

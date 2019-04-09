@@ -3,7 +3,7 @@ namespace VerityFinancial.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class intialafterdbdrop : DbMigration
     {
         public override void Up()
         {
@@ -11,13 +11,14 @@ namespace VerityFinancial.Data.Migrations
                 "dbo.Customer",
                 c => new
                     {
-                        CustomerID = c.Guid(nullable: false),
+                        CustomerId = c.Int(nullable: false, identity: true),
+                        CustomerGuid = c.Guid(nullable: false),
                         FirstName = c.String(nullable: false),
                         LastName = c.String(nullable: false),
                         PhoneNumber = c.Int(nullable: false),
                         Address = c.String(),
                     })
-                .PrimaryKey(t => t.CustomerID);
+                .PrimaryKey(t => t.CustomerId);
             
             CreateTable(
                 "dbo.IdentityRole",

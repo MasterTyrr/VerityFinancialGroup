@@ -42,5 +42,36 @@ namespace Johns_WebPage.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateCustomerService();
+            var model = svc.GetCustomerById(id);
+
+            return View(model);
+        }
+
+        public CustomerServices CreateCustomerService()
+        {
+            var id = Guid.Parse(User.Identity.GetUserId());
+            var svc = new CustomerServices(id);
+            return svc;
+        }
+
+        public ActionResult Trade(int id)
+        {
+            var service = CreateCustomerService();
+            var detail = service.GetCustomerById(id);
+            var model =
+                new CustomerTrade
+                {
+                    FirstName = detail.FirstName,
+                    LastName = detail.LastName,
+                    PhoneNumber = detail.PhoneNumber,
+                    Address = detail.Address,
+               
+                };
+            return View(model);
+        }
     }
 }
