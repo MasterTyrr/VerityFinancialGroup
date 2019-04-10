@@ -8,6 +8,7 @@ namespace VerityFinancial.Models
 {
     public class CustomerTrade
     {
+        public int CustomerId { get; set; }
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

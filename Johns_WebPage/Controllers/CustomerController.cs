@@ -65,6 +65,7 @@ namespace Johns_WebPage.Controllers
             var model =
                 new CustomerTrade
                 {
+                    CustomerId = detail.CustomerId,
                     FirstName = detail.FirstName,
                     LastName = detail.LastName,
                     PhoneNumber = detail.PhoneNumber,

@@ -86,6 +86,7 @@ namespace VerityFinancial.Services
                     ctx
                         .Customers
                         .Single(e => e.CustomerGuid == _userId);
+                entity.CustomerId = model.CustomerId;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.PhoneNumber = model.PhoneNumber;
