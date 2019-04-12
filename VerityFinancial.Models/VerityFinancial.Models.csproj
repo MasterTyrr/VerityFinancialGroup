@@ -59,6 +59,7 @@
     <Compile Include="CustomerListItems.cs" />
     <Compile Include="CustomerTrade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

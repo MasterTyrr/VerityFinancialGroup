@@ -30,7 +30,7 @@ namespace Johns_WebPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CustomerCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
@@ -72,6 +72,30 @@ namespace Johns_WebPage.Controllers
                     Address = detail.Address,
                
                 };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Trade (int id, CustomerTrade model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            //if (model.CustomerId != id)
+            //{
+            //    ModelState.AddModelError("", "Id Mismastch");
+            //    return View(model);
+            //}
+
+            var service = CreateCustomerService();
+
+            if (service.UpdateCustomer(model))
+            {
+                TempData["SaveResult"] = "Their Information has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "The client's information could not be updated.");
             return View(model);
         }
     }
