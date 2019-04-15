@@ -9,14 +9,14 @@ using VerityFinancial.Services;
 
 namespace Johns_WebPage.Controllers
 {
-    public class StockController : Controller
+    public class BondsController : Controller
     {
-        //GET: Stock
+        // GET: Bonds
         public ActionResult Index()
         {
             var CustomerId = Guid.Parse(User.Identity.GetUserId());
-            var service = new StockServices(CustomerId);
-            var model = service.GetStockList();
+            var service = new BondServices(CustomerId);
+            var model = service.GetBondList();
             return View(model);
         }
 
@@ -27,44 +27,42 @@ namespace Johns_WebPage.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(StockCreate model)
+        public ActionResult Create(BondCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            var StockId = Guid.Parse(User.Identity.GetUserId());
-            var service = new StockServices(StockId);
+            var BondId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BondServices(BondId);
 
-            service.CreateStock(model);
+            service.CreateBond(model);
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(int id)
         {
-            var svc = CreateStockService();
-            var model = svc.GetStockById(id);
+            var svc = CreateBondService();
+            var model = svc.GetBondById(id);
             return View(model);
-
         }
 
-        public StockServices CreateStockService()
+        public BondServices CreateBondService()
         {
             var id = Guid.Parse(User.Identity.GetUserId());
-            var svc = new StockServices(id);
+            var svc = new BondServices(id);
             return svc;
         }
-
-        public ActionResult STrade(int id)
+        public ActionResult BTrade(int id)
         {
-            var service = CreateStockService();
-            var detail = service.GetStockById(id);
+            var service = CreateBondService();
+            var detail = service.GetBondById(id);
             var model =
-                new StockTrade
+                new BondTrade
                 {
-                    StockId = detail.StockID,
-                    StockName = detail.StockName,
-                    StockAbbev = detail.StockAbbev,
+                    BondId = detail.BondID,
+                    BondName = detail.BondName,
+                    BondAbbev = detail.BondAbbev,
                     Cost = detail.Cost,
                     CostCurrent = detail.CostCurrent,
                 };
@@ -72,17 +70,17 @@ namespace Johns_WebPage.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult STrade(int id, StockTrade model)
+        public ActionResult BTrade(int id, BondTrade model)
         {
             if (!ModelState.IsValid) return View(model);
-            var service = CreateStockService();
-            if (service.UpdateStock(model))
+            var service = CreateBondService();
+            if (service.UpdateBond(model))
             {
                 TempData["SaveResult"] = "Thank you for Trading with us today.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Stock could not be traded at this time.");
+            ModelState.AddModelError("", "Bond could not be traded at this time.");
             return View(model);
         }
     }

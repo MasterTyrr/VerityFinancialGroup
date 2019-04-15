@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bond.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\201904091843304_intialafterdbdrop.cs" />
@@ -67,6 +68,18 @@
     <Compile Include="Migrations\201904091906224_phoneinttostring.cs" />
     <Compile Include="Migrations\201904091906224_phoneinttostring.Designer.cs">
       <DependentUpon>201904091906224_phoneinttostring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904121954224_stocks.cs" />
+    <Compile Include="Migrations\201904121954224_stocks.Designer.cs">
+      <DependentUpon>201904121954224_stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904151522508_Bonds.cs" />
+    <Compile Include="Migrations\201904151522508_Bonds.Designer.cs">
+      <DependentUpon>201904151522508_Bonds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.cs" />
+    <Compile Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.Designer.cs">
+      <DependentUpon>201904151526211_BondsUpdatedBeforeLaunch.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904091906224_phoneinttostring.resx">
       <DependentUpon>201904091906224_phoneinttostring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904121954224_stocks.resx">
+      <DependentUpon>201904121954224_stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904151522508_Bonds.resx">
+      <DependentUpon>201904151522508_Bonds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.resx">
+      <DependentUpon>201904151526211_BondsUpdatedBeforeLaunch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

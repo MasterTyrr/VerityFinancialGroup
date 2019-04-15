@@ -1,0 +1,66 @@
+﻿@model VerityFinancial.Models.BondDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BondDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BondID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BondID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BondGuid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BondGuid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BondName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BondName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BondAbbev)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BondAbbev)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostCurrent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostCurrent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

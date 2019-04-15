@@ -8,43 +8,43 @@ using VerityFinancial.Models;
 
 namespace VerityFinancial.Services
 {
-    public class StockServices
+    public class BondServices
     {
-        private readonly Guid _stockId;
+        private readonly Guid _bondId;
 
-        public StockServices(Guid stockId)
+        public BondServices(Guid bondId)
         {
-            _stockId = stockId;
+            _bondId = bondId;
         }
-        public bool CreateStock(StockCreate model)
+        public bool CreateBond(BondCreate model)
         {
             var entity =
-                new Stock()
+                new Bond()
                 {
-                    StockName = model.StockName,
-                    StockAbbev = model.StockAbbev,
+                    BondName = model.BondName,
+                    BondAbbev = model.BondAbbev,
                     Cost = model.Cost,
                     CostCurrent = model.CostCurrent
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Stocks.Add(entity);
+                ctx.Bonds.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<StockListItem> GetStockList()
+        public IEnumerable<BondListItem> GetBondList()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .Stocks
+                    .Bonds
                     .Select(
                         e =>
-                            new StockListItem
+                            new BondListItem
                             {
-                                StockName = e.StockName,
-                                StockAbbev = e.StockAbbev,
+                                BondName = e.BondName,
+                                BondAbbev = e.BondAbbev,
                                 Cost = e.Cost,
                                 CostCurrent = e.CostCurrent
                             }
@@ -52,43 +52,42 @@ namespace VerityFinancial.Services
                 return query.ToArray();
             }
         }
-        public StockDetail GetStockById(int id)
+        public BondDetail GetBondById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
 
                 var entity =
                  ctx
-                     .Stocks
-                     .Single(e => e.StockID == id);
+                     .Bonds
+                     .Single(e => e.BondID == id);
                 return
-                    new StockDetail
+                    new BondDetail
                     {
-                        StockID = entity.StockID,
-                        StockName = entity.StockName,
-                        StockAbbev = entity.StockAbbev,
+                        BondID = entity.BondID,
+                        BondName = entity.BondName,
+                        BondAbbev = entity.BondAbbev,
                         Cost = entity.Cost,
                         CostCurrent = entity.CostCurrent
                     };
             }
         }
-        public bool UpdateStock(StockTrade model)
+        public bool UpdateBond(BondTrade model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .Stocks
-                        .Single(e => e.StockGuid == _stockId);
+                        .Bonds
+                        .Single(e => e.BondGuid == _bondId);
                 //entity.CustomerId = model.CustomerId;
-                entity.StockName = model.StockName;
-                entity.StockAbbev = model.StockAbbev;
+                entity.BondName = model.BondName;
+                entity.BondAbbev = model.BondAbbev;
                 entity.Cost = model.Cost;
                 entity.CostCurrent = model.CostCurrent;
 
                 return ctx.SaveChanges() == 1;
             }
         }
-
     }
 }
