@@ -23,8 +23,8 @@ namespace VerityFinancial.Services
                 {
                     StockName = model.StockName,
                     StockAbbev = model.StockAbbev,
-                    Cost = model.Cost,
-                    CostCurrent = model.CostCurrent
+                    SCost = model.Cost,
+                    SCostCurrent = model.CostCurrent
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -45,8 +45,8 @@ namespace VerityFinancial.Services
                             {
                                 StockName = e.StockName,
                                 StockAbbev = e.StockAbbev,
-                                Cost = e.Cost,
-                                CostCurrent = e.CostCurrent
+                                Cost = e.SCost,
+                                CostCurrent = e.SCostCurrent
                             }
                     );
                 return query.ToArray();
@@ -67,8 +67,8 @@ namespace VerityFinancial.Services
                         StockID = entity.StockID,
                         StockName = entity.StockName,
                         StockAbbev = entity.StockAbbev,
-                        Cost = entity.Cost,
-                        CostCurrent = entity.CostCurrent
+                        Cost = entity.SCost,
+                        CostCurrent = entity.SCostCurrent
                     };
             }
         }
@@ -83,8 +83,8 @@ namespace VerityFinancial.Services
                 //entity.CustomerId = model.CustomerId;
                 entity.StockName = model.StockName;
                 entity.StockAbbev = model.StockAbbev;
-                entity.Cost = model.Cost;
-                entity.CostCurrent = model.CostCurrent;
+                entity.SCost = model.Cost;
+                entity.SCostCurrent = model.CostCurrent;
 
                 return ctx.SaveChanges() == 1;
             }

@@ -35,6 +35,7 @@ namespace VerityFinancial.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<Bond> Bonds { get; set; }
+        public DbSet<ClientPortfolio> ClientPortfolio { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

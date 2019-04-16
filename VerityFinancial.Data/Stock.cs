@@ -18,9 +18,9 @@ namespace VerityFinancial.Data
         public string StockName { get; set; }
         [Required]
         public string StockAbbev { get; set; }
-        public decimal  Cost { get; set; }
+        public decimal  SCost { get; set; }
 
-        public decimal CostCurrent { get; set; }
+        public decimal SCostCurrent { get; set; }
 
 
 

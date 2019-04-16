@@ -16,7 +16,7 @@ namespace VerityFinancial.Data
         public string BondName { get; set; }
         [Required]
         public string BondAbbev { get; set; }
-        public decimal Cost { get; set; }
-        public decimal CostCurrent { get; set; }
+        public decimal BCost { get; set; }
+        public decimal BCostCurrent { get; set; }
     }
 }

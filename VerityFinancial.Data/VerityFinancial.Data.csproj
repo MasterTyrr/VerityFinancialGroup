@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bond.cs" />
+    <Compile Include="ClientPortfolio.cs" />
+    <Compile Include="ClientPortfolioListItem.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\201904091843304_intialafterdbdrop.cs" />
@@ -80,6 +82,10 @@
     <Compile Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.cs" />
     <Compile Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.Designer.cs">
       <DependentUpon>201904151526211_BondsUpdatedBeforeLaunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161401220_Stock_Bond_Changes_With_Portfolio_Addition_To_DB.cs" />
+    <Compile Include="Migrations\201904161401220_Stock_Bond_Changes_With_Portfolio_Addition_To_DB.Designer.cs">
+      <DependentUpon>201904161401220_Stock_Bond_Changes_With_Portfolio_Addition_To_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904151526211_BondsUpdatedBeforeLaunch.resx">
       <DependentUpon>201904151526211_BondsUpdatedBeforeLaunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161401220_Stock_Bond_Changes_With_Portfolio_Addition_To_DB.resx">
+      <DependentUpon>201904161401220_Stock_Bond_Changes_With_Portfolio_Addition_To_DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

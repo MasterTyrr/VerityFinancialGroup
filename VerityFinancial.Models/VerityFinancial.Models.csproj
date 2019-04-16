@@ -58,6 +58,7 @@
     <Compile Include="BondDetail.cs" />
     <Compile Include="BondListItem.cs" />
     <Compile Include="BondTrade.cs" />
+    <Compile Include="ClientPortfolioCreate.cs" />
     <Compile Include="CustomerCreate.cs" />
     <Compile Include="CustomerDetail.cs" />
     <Compile Include="CustomerListItems.cs" />
