@@ -8,6 +8,7 @@ namespace VerityFinancial.Models
 {
     public class StockListItem
     {
+        public int StockID { get; set; }
         public string StockName { get; set; }
 
         public string StockAbbev { get; set; }

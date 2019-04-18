@@ -59,6 +59,9 @@
     <Compile Include="BondListItem.cs" />
     <Compile Include="BondTrade.cs" />
     <Compile Include="ClientPortfolioCreate.cs" />
+    <Compile Include="ClientPortfolioDetail.cs" />
+    <Compile Include="ClientPortfolioListItem.cs" />
+    <Compile Include="ClientPortfolioTrade.cs" />
     <Compile Include="CustomerCreate.cs" />
     <Compile Include="CustomerDetail.cs" />
     <Compile Include="CustomerListItems.cs" />
@@ -72,6 +75,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VerityFinancial.Data\VerityFinancial.Data.csproj">
+      <Project>{EF1D2856-9F7E-498D-8AA2-303EFB3D16C3}</Project>
+      <Name>VerityFinancial.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

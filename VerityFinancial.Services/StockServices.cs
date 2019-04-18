@@ -43,6 +43,7 @@ namespace VerityFinancial.Services
                         e =>
                             new StockListItem
                             {
+                                StockID = e.StockID,
                                 StockName = e.StockName,
                                 StockAbbev = e.StockAbbev,
                                 Cost = e.SCost,

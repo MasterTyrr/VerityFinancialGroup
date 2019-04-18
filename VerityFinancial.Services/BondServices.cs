@@ -43,6 +43,7 @@ namespace VerityFinancial.Services
                         e =>
                             new BondListItem
                             {
+                                BondId = e.BondID,
                                 BondName = e.BondName,
                                 BondAbbev = e.BondAbbev,
                                 Cost = e.BCost,
@@ -81,6 +82,7 @@ namespace VerityFinancial.Services
                         .Bonds
                         .Single(e => e.BondGuid == _bondId);
                 //entity.CustomerId = model.CustomerId;
+                entity.BondID = model.BondId;
                 entity.BondName = model.BondName;
                 entity.BondAbbev = model.BondAbbev;
                 entity.BCost = model.Cost;

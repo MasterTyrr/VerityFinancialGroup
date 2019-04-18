@@ -8,6 +8,7 @@ namespace VerityFinancial.Models
 {
     public class BondListItem
     {
+        public int BondId { get; set; }
         public string BondName { get; set; }
                       
         public string BondAbbev { get; set; }
