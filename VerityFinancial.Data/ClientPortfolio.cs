@@ -20,12 +20,12 @@ namespace VerityFinancial.Data
         public string Lastname { get; set; }
 
         public int StockID { get; set; }
-        //public string StockAbbev { get; set; }
+        public string StockAbbev { get; set; }
         //public decimal SCost { get; set; }
         public int StockQuantity { get; set; }
 
         public int BondID { get; set; }
-        //public string BondAbbev { get; set; }
+        public string BondAbbev { get; set; }
         //public decimal BCost { get; set; }
         public int BondQuantity { get; set; }
 

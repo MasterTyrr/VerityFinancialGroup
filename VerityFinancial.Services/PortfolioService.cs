@@ -24,8 +24,10 @@ namespace VerityFinancial.Services
                 PortfolioID = model.PortfolioID,
                 CustomerId = model.CustomerId,
                 StockID = model.StockID,
+                StockAbbev = model.StockAbbev,
                 StockQuantity = model.StockQuantity,
                 BondID = model.BondID,
+                BondAbbev = model.BondAbbev,
                 BondQuantity = model.BondQuantity
             };
             using (var ctx = new ApplicationDbContext())

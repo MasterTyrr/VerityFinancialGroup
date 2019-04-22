@@ -1,17 +1,81 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>Let Us Do The Heavy lifting!</h2>
+<h3></h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
+    <b>We will provide</b> a no-risk, no-fee consultation.<br />
+    <br />
+    <b>We will guide</b>you through the financial planning process (whether you are planting seeds with a 401K or reaping a bumper crop).<br />
+    <br />
+    <b>We will ensure</b> your success from planting through harvest.<br />
+    <br />
+    <b>Scope:</b> Clients in the United States<br />
+    <br />
+    Complete the contact form below or call to schedule a phone, in-person, or video conference meeting. <br />
+
     <abbr title="Phone">P:</abbr>
-    425.555.0100
+    (512) 294-4711
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<section id="contact">
+    <div class="container">
+        <br>
+        <br>
+        <h2 class="text-center text-uppercase">Contact Us</h2>
+        <div class="row">
+            <div class="col-12">
+                <!-- Change Email -->
+                <form action="https://formspree.io/samuelPRichards975@gmail.com" method="POST">
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Your Name"
+                                   id="name"
+                                   required
+                                   data-validation-required-message="Please enter your name"
+                                   name="name">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="Your Email"
+                                   id="email"
+                                   required
+                                   data-validation-required-message="Please enter your email"
+                                   name="_replyto">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <textarea class="form-control"
+                                      rows="7"
+                                      placeholder="Your Message"
+                                      id="message"
+                                      required
+                                      data-validation-required-message="Please leave a message"
+                                      name="message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-lg btn-black">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>      
+
